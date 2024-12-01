@@ -1,5 +1,7 @@
 package com.dukcode.authservice.config;
 
+import com.dukcode.authservice.entity.EntityModule;
+import com.dukcode.authservice.repository.RepositoryModule;
 import jakarta.persistence.EntityManagerFactory;
 import java.beans.ConstructorProperties;
 import javax.sql.DataSource;
@@ -14,8 +16,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
 @Configuration
-@EntityScan
-@EnableJpaRepositories
+@EntityScan(basePackageClasses = {EntityModule.class})
+@EnableJpaRepositories(basePackageClasses = {RepositoryModule.class})
 public class PersistenceJpaConfig {
 
   @Bean
