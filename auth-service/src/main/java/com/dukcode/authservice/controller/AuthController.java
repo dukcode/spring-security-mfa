@@ -23,6 +23,6 @@ public class AuthController {
 
   @PostMapping("/api/v1/otp/check")
   public boolean checkOtp(@RequestBody SimpleOtpRequestBody requestBody) {
-    return otpService.checkOtp(requestBody.getUserId(), requestBody.getOtpCode());
+    return otpService.checkOtp(requestBody.getUserId(), requestBody.getOtp());
   }
 }

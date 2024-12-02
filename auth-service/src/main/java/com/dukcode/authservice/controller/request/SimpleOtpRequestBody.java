@@ -8,12 +8,12 @@ public class SimpleOtpRequestBody {
 
   private final String userId;
 
-  private String otpCode;
+  private String otp;
 
-  @ConstructorProperties({"userId", "otpCode"})
-  public SimpleOtpRequestBody(String userId, String otpCode) {
+  @ConstructorProperties({"userId", "otp"})
+  public SimpleOtpRequestBody(String userId, String otp) {
     this.userId = userId;
-    this.otpCode = otpCode;
+    this.otp = otp;
   }
 
 }
